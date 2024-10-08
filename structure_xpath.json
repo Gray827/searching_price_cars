@@ -1,0 +1,65 @@
+{
+    "web": [
+	{
+	    "field": "sources",
+	    "url": "https://carlist.vn"
+	},
+	{
+	    "field": "link_request",
+	    "url_request": "https://carlist.vn/price-list-used-car"
+	},
+	{
+	    "field": "link",
+	    "xpath_post": "//a[contains(@class,'inline-block')]/@href"
+	},
+	{
+	    "field": "link_page",
+	    "xpath_page": "(//a[contains(@class,'pagination-item')])[4]/@href"
+	},
+	{
+	    "crawl_data": [
+	       	{
+		    "field": "published_date",
+	       	    "xpath_date": ""
+		},
+		{
+		    "field": "location",
+		    "xpath_location": ""
+		},
+		{
+		    "field": "name_car",
+		    "xpath_name": "//h1[contains(@class,'font-semibold')]/text()"
+		},
+		{
+		    "field": "brand_car",
+       		    "xpath_brand": "(//div[contains(@class,'items-center')]/div/a[contains(@class,'font-semibold')])[1]/text()"
+		},
+		{
+		    "field": "model_car",
+		    "xpath_model": "(//div[contains(@class,'items-center')]/div/a[contains(@class,'font-semibold')])[2]/text()",
+		    "url_model": "//div[contains(@class,'text-main')]//div[contains(@class,'flex-wrap')]/div[contains(@class, 'group')]/a[1]/@href"
+		},
+		{
+		    "field": "type_car",
+         	    "xpath_type": "(//div[contains(@class,'items-center')]/div/a[contains(@class,'font-semibold')])[3]/text()"
+		},
+		{
+		    "field": "price",
+	            "xpath_price": "//h1[contains(@class,'font-semibold')]/text()"
+		},
+		{
+		    "field": "year_production",
+		    "xpath_year": "(//div[contains(@class,'items-center')]/div/p[@class='text-sm'])[4]/text()"
+		},
+		{
+	    	    "field": "status",
+		    "xpath_status": "(//div[contains(@class,'items-center')]/div/p[@class='text-sm'])[6]/text()"
+		},
+		{
+		    "field": "kilometer",
+		    "xpath_km": "(//div[contains(@class,'items-center')]/div/p[@class='text-sm'])[8]/text()"
+		}
+	    ]
+	}
+    ]	
+}
